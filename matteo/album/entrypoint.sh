@@ -1,7 +1,6 @@
 #!/bin/bash
 
-ls -al
-pwd
+ls -al /
 
 python3 media_downloader.py
 
