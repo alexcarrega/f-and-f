@@ -9,4 +9,4 @@ RUN make install
 COPY config.yaml ./
 COPY entrypoint.sh ./
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "/telegram_media_downloader/entrypoint.sh" ]
