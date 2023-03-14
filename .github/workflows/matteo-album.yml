@@ -25,4 +25,4 @@ jobs:
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       FTP_HOST: ${{ secrets.FTP_HOST }}
     steps:
-      - uses: ghcr.io/alexcarrega/matteo-album:latest
+      - uses: docker://ghcr.io/alexcarrega/matteo-album:latest
