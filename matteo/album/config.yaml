@@ -1,0 +1,15 @@
+api_hash: 4a47002f7249ae8edd8b269313dd2a64
+api_id: 27385183
+chat_id: g941620727
+last_read_message_id: 0
+ids_to_retry: []
+media_types:
+  - photo
+file_formats:
+  audio:
+    - all
+  document:
+    - pdf
+    - epub
+  video:
+    - mp4

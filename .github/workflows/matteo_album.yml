@@ -1,0 +1,19 @@
+name: Matteo Album
+
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Log level"
+        required: true
+        default: "warning"
+  push:
+    paths:
+      - matteo/album/**
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  album:
+    runs-on: ubuntu-latest
+    container: ghcr.io/alexcarrega/matteo-album:latest
