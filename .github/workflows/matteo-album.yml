@@ -20,9 +20,9 @@ jobs:
     permissions:
       packages: write
       contents: read
-    env:
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      FTP_HOST: ${{ secrets.FTP_HOST }}
     steps:
       - uses: docker://ghcr.io/alexcarrega/matteo-album:latest
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
