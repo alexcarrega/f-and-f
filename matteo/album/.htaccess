@@ -1,0 +1,4 @@
+AuthName "Password"
+AuthType Basic
+AuthUserFile /home/qlhqcobm/public_html/matteo/.htpasswd
+Require valid-user
