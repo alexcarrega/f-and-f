@@ -1,8 +1,13 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.10
+
+# Setup timezone
+RUN echo 'Etc/UTC' > /etc/timezone && \
+    rm -f /etc/localtime && \
+    ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y fortune-mod cowsay lolcat prettyping git wget curl sudo
+RUN apt install -y fortune-mod cowsay lolcat prettyping git wget curl sudo tzdata make
 
 RUN wget https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb
 RUN dpkg -i bat_0.22.1_amd64.deb
