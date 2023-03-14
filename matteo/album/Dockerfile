@@ -3,7 +3,10 @@ FROM ghcr.io/alexcarrega/python3:latest
 RUN apt install -y fgallery facedetect ncftp
 
 RUN git clone https://github.com/Dineshkarthik/telegram_media_downloader.git
-WORKDIR /root/telegram_media_downloader
+WORKDIR $HOME/telegram_media_downloader
+RUN pwd
+RUN ls -al
+RUN echo $HOME
 RUN make install
 
 COPY config.yaml ./
