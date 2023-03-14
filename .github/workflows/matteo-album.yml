@@ -26,4 +26,4 @@ jobs:
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       FTP_HOST: ${{ secrets.FTP_HOST }}
     steps:
-      - run: bash ./entrypoint.sh
+      - run: "ls -al; pwd; bash ./entrypoint.sh"
