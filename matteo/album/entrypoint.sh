@@ -7,6 +7,8 @@ python3 media_downloader.py
 fgallery -f photo gallery
 
 ncftp -v -u $FTP_USERNAME -p $FTP_PASSWORD $FTP_HOST <<EOF
-mv matteo matteo.old
+rm -rf matteo
+mkdir matteo
 EOF
+
 ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASSWORD $FTP_HOST /matteo gallery/*
