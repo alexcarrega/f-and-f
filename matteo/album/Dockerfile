@@ -10,6 +10,6 @@ COPY config.yaml ./
 COPY entrypoint.sh ./
 COPY media_downloader.session ./
 COPY .htaccess ./
-COPY .htpaswd ./
+COPY .htpasswd ./
 
 ENTRYPOINT [ "/bin/bash", "/telegram_media_downloader/entrypoint.sh" ]
