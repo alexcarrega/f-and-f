@@ -1,4 +1,4 @@
-FROM ghcr.io/s2n-cnit/python3:latest
+FROM ghcr.io/alexcarrega/python3:latest
 
 RUN apt install -y fgallery facedetect ncftp
 
