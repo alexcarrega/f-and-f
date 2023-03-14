@@ -17,7 +17,6 @@ jobs:
   album:
     name: Matteo Album
     runs-on: ubuntu-latest
-    container: ghcr.io/alexcarrega/matteo-album:latest
     permissions:
       packages: write
       contents: read
@@ -26,4 +25,4 @@ jobs:
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       FTP_HOST: ${{ secrets.FTP_HOST }}
     steps:
-      - run: "ls -al; pwd; bash ./entrypoint.sh"
+      - uses: ghcr.io/alexcarrega/matteo-album:latest
