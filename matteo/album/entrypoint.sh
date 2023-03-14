@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ls -al
+pwd
+
 python3 media_downloader.py
 
 fgallery photo gallery
