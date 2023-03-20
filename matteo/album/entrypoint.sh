@@ -1,7 +1,5 @@
 #!/bin/bash
 
-env
-
 cd /telegram_media_downloader
 
 python3 media_downloader.py
