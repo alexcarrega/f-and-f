@@ -8,10 +8,7 @@ python3 media_downloader.py
 
 fgallery -f photo gallery
 
-ncftp -v -u $FTP_USERNAME -p $FTP_PASSWORD $FTP_HOST <<EOF
-rm -rf matteo
-mkdir matteo
-EOF
+curl --user "$WEBDISK_USERNAME:$WEBDISK_PASSWORD" -X DELETE "$WEBDISK_URL/matteo"
 
 ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASSWORD $FTP_HOST /matteo gallery/*
 ncftpput -R -v -u $FTP_USERNAME -p $FTP_PASSWORD $FTP_HOST /matteo .ht*
