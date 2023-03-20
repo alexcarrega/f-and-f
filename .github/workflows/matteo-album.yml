@@ -26,3 +26,6 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FTP_HOST: ${{ vars.FTP_HOST }}
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
+          WEBDISK_HOST: ${{ vars.WEBDISK_HOST }}
