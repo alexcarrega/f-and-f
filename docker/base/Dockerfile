@@ -1,4 +1,4 @@
-FROM ubuntu:23.10
+FROM ubuntu:24.04
 
 # Setup timezone
 RUN echo 'Etc/UTC' > /etc/timezone && \
