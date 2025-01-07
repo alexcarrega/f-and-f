@@ -9,7 +9,6 @@ RUN pip3 install pyrogram -r requirements.txt --break-system-packages
 
 COPY config.yaml ./
 COPY entrypoint.sh ./
-COPY media_downloader.session ./
 COPY .htaccess ./
 COPY .htpasswd ./
 
