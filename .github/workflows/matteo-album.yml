@@ -7,9 +7,6 @@ on:
         description: "Log level"
         required: true
         default: "warning"
-  push:
-    paths:
-      - matteo/album/**
   schedule:
     - cron: "0 0 * * *"
 
