@@ -1,14 +1,15 @@
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
-RUN apt update
-RUN apt install -y git python3 python3-pip fgallery facedetect ncftp curl
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt update
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y git python3 python3-pip fgallery facedetect ncftp curl
 
 RUN git clone https://github.com/alexcarrega/telegram_media_downloader.git
 WORKDIR /telegram_media_downloader
-RUN pip3 install pyrogram -r requirements.txt --break-system-packages
+RUN pip3 install pyrogram -r requirements.txt
 
 COPY config.yaml ./
 COPY entrypoint.sh ./
+COPY media_downloader.session ./
 COPY .htaccess ./
 COPY .htpasswd ./
 
