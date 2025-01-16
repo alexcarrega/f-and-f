@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt update
-RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y git python3 python3-pip facedetect ncftp curl libimage-exiftool-perl zip
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt install -y git python3 python3-pip facedetect ncftp curl libimage-exiftool-perl zip liblcms2-utils
 
 RUN git clone https://gitlab.com/wavexx/fgallery.git
 
